@@ -1,0 +1,1 @@
+A template for building webshops with Strapi CMS.
