@@ -1,0 +1,18 @@
+---
+layout: mylayout.njk
+---
+
+<div id="product-list">
+  {% for product in products %}
+    <div class="card" onclick="location.href='/products/{{ product.id }}';">
+      <div>
+        <img src="http://127.0.0.1:1337{{ product.attributes.image.data.attributes.url }}" alt="Product Image">
+          <h3>{{ product.attributes.title }}</h3>
+          <p>{{ product.attributes.description.split(" ").slice(0, 10).join(" ").concat("...") }}</p>
+          <p>{{ product.attributes.price }}€</p>
+          <button class="cartButton">Add to cart</button>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+  <script type="module" src="/js/shop.js"></script>

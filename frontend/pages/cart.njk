@@ -1,0 +1,34 @@
+---
+layout: mylayout.njk
+---
+
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Subtotal</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr id="errorLine">
+        <td>Cannot retrieve cart data.</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+    <table id="cartSummary">
+      <tr>
+        <td id="cartTotal"></td>
+      </tr>
+      <tr>
+        <td>
+          <button>Checkout</button>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+<script src="/js/cart.js"></script>

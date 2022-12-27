@@ -1,1 +1,1 @@
-A template for building webshops with Strapi CMS.
+A template for building webshops with Strapi CMS and 11ty.
