@@ -1,18 +1,19 @@
 ---
 layout: mylayout.njk
 pagination:
-data: products
-size: 1
-alias: product
+    data: products
+    size: 1
+    alias: product
 permalink: "products/{{ product.id | slug }}/"
 ---
 
 <div id="product-wrapper">
-  <img src="http://127.0.0.1:1337{{product.data.attributes.image.data.attributes.url}}" alt="Product Image">
+  <img src="http://127.0.0.1:1337{{product.attributes.image.data.attributes.url}}" alt="Product Image">
   <div id="product-info">
-    <h3>{{ product.attributes.title }}</h3>
+    <span id="productID" style="display:none">{{ product.id }}</span>
+    <h3 id="productTitle">{{ product.attributes.title }}</h3>
     <p>{{ product.attributes.description }}</p>
-    <p>{{ product.attributes.price }}€</p>
+    <p id="productPrice">{{ product.attributes.price }}€</p>
     <button class="cartButton">Add to cart</button>
   </div>
 </div>

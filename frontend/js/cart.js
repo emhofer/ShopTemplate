@@ -1,11 +1,10 @@
 const cart = JSON.parse(localStorage.getItem("cart"));
 
 let tableBody = document.querySelector("tbody");
-tableBody.removeChild(document.getElementById("errorLine"));
 
 for (let i = 0; i < cart.length; i++) {
   const { quantity } = cart[i];
-  const { title, price } = cart[i].attributes;
+  const { title, price } = cart[i];
   let cartRow = document.createElement("tr");
   let rowTitle = document.createElement("td");
   let rowPrice = document.createElement("td");
@@ -26,7 +25,6 @@ for (let i = 0; i < cart.length; i++) {
 }
 let subtotalElements = document.querySelectorAll(".subtotal");
 let total = 0;
-console.log(subtotalElements);
 for (let i = 0; i < subtotalElements.length; i++) {
   total += parseInt(subtotalElements[i].innerHTML);
 }

@@ -1,7 +1,7 @@
 const EleventyFetch = require("@11ty/eleventy-fetch");
 
 module.exports = async function () {
-  let url = "http://127.0.0.1:1337/api/products";
+  let url = "http://127.0.0.1:1337/api/products?populate=*";
 
   /* This returns a promise */
   let response = await EleventyFetch(url, {
