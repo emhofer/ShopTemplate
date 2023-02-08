@@ -1,17 +1,9 @@
-/* ------Variables (Dark/Light)------ */
-:root:not(.dark) {
-  --background-color: #eee;
-  --primary-color: #eee;
-  --font-color: #121212;
-}
-
-:root.dark {
-  --background-color: #cdcdcc;
-  --primary-color: #bcbcbb;
-  --font-color: #121212;
-}
-
 /* ------Main Styles------ */
+:root {
+  --background-color: #50514F;
+  --primary-color: #247BA0;
+  --font-color: #FFFCFF;
+}
 
 html,
 body {
@@ -33,7 +25,6 @@ header {
   position: sticky;
   top: 0;
   z-index: 999;
-  border-bottom: 1px solid var(--font-color);
   background-color: var(--primary-color);
 }
 
@@ -43,6 +34,10 @@ header {
   align-items: center;
   justify-content: space-between;
   height: 100px;
+}
+
+#headerLinks a {
+  margin-right: 1rem;
 }
 
 #txtTitle {
@@ -81,7 +76,6 @@ img {
 .card {
   background-color: var(--primary-color);
   color: var(--font-color);
-  border: 1px solid var(--font-color);
   min-height: 150px;
   padding: 0 1em 0 1em;
   display: inline-block;
@@ -90,6 +84,10 @@ img {
 #product-list .card {
   padding-top: 1em;
   padding-bottom: 1em
+}
+
+#product-info {
+  padding: 0 1rem 0 1rem;
 }
 
 .card:hover {
@@ -122,18 +120,34 @@ a {
 
 #product-wrapper {
   margin: 1rem;
+  background-color: var(--primary-color);
 }
 
 footer div {
   display: flex;
   justify-content: space-evenly;
   padding: 1rem 0 1rem 0;
-  border-top: 1px solid var(--font-color);
 }
 
 .cartButton {
   position: relative;
   bottom: 0.5em;
+}
+
+button {
+  border: none;
+  background-color: #50514F;
+  padding: 5px;
+  border-radius: 5px;
+  color: var(--font-color);
+}
+
+button:active {
+  box-shadow: 0 0 0 2px var(--font-color);
+}
+
+button:hover {
+  background-color: #60615f;
 }
 
 table {
